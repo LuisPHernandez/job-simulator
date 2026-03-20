@@ -1,12 +1,10 @@
-version: "3.9"
-
 services:
   frontend:
     build: ./frontend
     ports:
       - "8088:80"
     volumes:
-      - .frontend/public:/usr/share/nginx/html:ro
+      - ./frontend/public:/usr/share/nginx/html:ro
   
   db:
     image: postgres:16-alpine
